@@ -12,8 +12,7 @@ static const convert_t CONVERT_TAB[] = {
         {"*|EMAIL|*",            "{{ contact.EMAIL }}"},
         {"*|LIST:ADDRESSLINE|*", "REDACTED"},
         {"*|REWARDS|*",          ""},
-        {"*|ABOUT_LIST|*",       ""},
-        {"*|", ""}
+        {"*|ABOUT_LIST|*",       ""}
 };
 
 bool read_file(int argc, char *argv[], std::ifstream &file, std::ofstream &out)
