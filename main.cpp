@@ -13,7 +13,6 @@ static const convert_t CONVERT_TAB[] = {
         {"*|LIST:ADDRESSLINE|*", "Alsace Digitale · 15 route du Rhin · Strasbourg 67100 · France"},
         {"*|REWARDS|*",          ""},
         {"*|ABOUT_LIST|*",       ""},
-        {"*|", ""}
 };
 
 bool read_file(int argc, char *argv[], std::ifstream &file, std::ofstream &out)
