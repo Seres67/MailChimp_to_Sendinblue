@@ -24,12 +24,16 @@ bool read_file(int argc, char *argv[], std::ifstream &file, std::ofstream &out)
         return (false);
     }
     filename = argv[1];
+    if (filename.find(".html") == std::string::npos) {
+        std::cout << "Only supports HTML files" << std::endl;
+        return (84);
+    }
     file.open(filename);
     if (file.fail()) {
         std::cout << "Couldn't open file" << std::endl;
         return (false);
     }
-    out.open(filename.substr(0, filename.find('.')) + "_sendinblue.html");
+    out.open(filename.substr(0, filename.find('.html')) + "_sendinblue.html");
     if (out.fail()) {
         std::cout << "Couldn't create output file" << std::endl;
         return (false);
